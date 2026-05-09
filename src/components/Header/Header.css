@@ -1,0 +1,10 @@
+.header {
+  border-bottom: 1px solid #FFF;
+}
+
+.header__title {
+  font-size: 70px;
+  text-align: center;
+  color: #FFF;
+  margin: 0;
+}
