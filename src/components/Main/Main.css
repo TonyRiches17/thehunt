@@ -2,13 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 183, 195, .7);
-  padding-bottom: 50px;
+  background-color: rgba(255, 183, 195, 1);
+  padding: 50px;
 }
 
 .main__instructions {
   font-size: 30px;
-  padding: 50px;
+  text-align: center;
+  padding-bottom: 50px;
   margin: 0;
 }
 
@@ -16,13 +17,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 40px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .main__input {
   font-size: 38px;
-  width: 105px;
+  text-align: center;
+  width: 100px;
   height: 40px;
   border-radius: 5px;
+}
+
+.main__input-answer {
+  font-size: 38px;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.main__input-answer_off {
+  font-size: 38px;
+  text-align: center;
+  color: #000;
+  background-color: #777;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.main__clue-correct {
+  margin: 0;
+}
+
+.main__clue-correct3 {
+  margin: 0;
+  color: #FFF;
+  background-color: #000;
+}
+
+.main__clue-incorrect {
+  margin: 0;
 }
 
 .main__button {
@@ -34,4 +74,23 @@
   color: #FFF;
   margin-top: 40px;
   cursor: pointer;
+}
+
+.main__video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.main__video-videos {
+  list-style-type: none;
+}
+
+.main__video-video {
+  width: 330px;
+  height: 250px;
+  border: 1px solid #000;
+  border-radius: 10px;
 }
