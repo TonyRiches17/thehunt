@@ -26,10 +26,11 @@ function Main() {
     <div className="main">
       <p className="main__instructions">Welcome to the Hunt. The following are a set of instructions to help guide
         you through your day. This hunt shall consist of a few locations and a few people you must visit/contact in order
-        to obtain the necessary codes to complete the hunt. Once you obtain a (4-digit) code you may enter it into any code box
+        to obtain the necessary codes to complete the hunt. Each code consists of (4-digits). Once retrieved, you may enter it into any code box
         underneath. Only one box will accept the respective code, so you may have to try them all.
-        Each clue shall provide you with a detail to remember, and a code to enter. Each correctly
-        entered code will reveal the next location. Your first set of instructions is to contact your Best Friend. Have Fun!
+        Each clue shall provide you with some piece of valuable information. Each correctly
+        entered code will reveal the next step. Your first clue is to contact your Best Friend. Hint: You can ask
+        people to text you so you won't forget anything. Have Fun!
       </p>
       <div className="main__codes-container">
         <input maxLength={4} placeholder="Box 1" onChange={handleInputChange} name="code1" type="text" className="main__input" />
@@ -41,7 +42,7 @@ function Main() {
       <div className="main__clue">
         {input.code1 === "1223" ? (
           <p className="main__clue-correct">
-            Box 1: Good Job. The clue that this code reveals, is for you to call this number (810)-789-3152.
+            Box 1: Good Job. The clue that this code reveals, is for you to call your Mother.
           </p>
         ) : input.code1.length >= 4 ? (
           <p className="main__clue-incorrect">
@@ -52,7 +53,7 @@ function Main() {
       <div className="main__clue">
         {input.code2 === "0224" ? (
           <p className="main__clue-correct">
-            Box 2: Good Job. The clue that this code reveals, is for you to contact your Parents.
+            Box 2: Good Job. The clue that this code reveals, is for you to contact your Father.
           </p>
         ) : input.code2.length >= 4 ? (
           <p className="main__clue-incorrect">
@@ -61,7 +62,7 @@ function Main() {
         ) : null}
       </div>
       <div className="main__clue">
-        {input.code3 > 2000 && input.code3 < 2145  ? (
+        {complete && (input.code3 > 2000 && input.code3 < 2155) ? (
           <p className="main__clue-correct3">
             Box 3: Good Job. Go to your backyard to obtain the final entry in the answer box.
           </p>
